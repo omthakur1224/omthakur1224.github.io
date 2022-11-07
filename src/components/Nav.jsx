@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Nav() {
   return (
@@ -7,10 +8,10 @@ function Nav() {
     backgroundColor:"skyblue"
     }}>
       <div style={{display:"flex",justifyContent:"space-around"}}>
-        <ul>Home</ul>
-        <ul>About</ul>
-        <ul>Tech Stack</ul>
-        <ul>Projects</ul>
+        <Link to={'/'}> <ul> Home</ul></Link>
+        <Link to={'/about'}> <ul> About</ul></Link >
+        <Link to={'/tech-stack'}> <ul> Tech Stack</ul></Link >
+        <Link to={'/projects'}> <ul> Projects</ul></Link >
       </div>
       <div>
         <ul>logo</ul>
