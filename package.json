@@ -12,7 +12,11 @@
     "react-responsive": "^9.0.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "latest",
+    "json2mq": "latest"
   },
   "scripts": {
     "predeploy": "npm run build",

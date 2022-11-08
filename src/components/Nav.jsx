@@ -1,28 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import './Nav.css'
 function Nav() {
   return (
-    <div style={{
-        display:"flex",
-        justifyContent:"space-evenly",
-        height:"50px",
-        backgroundColor:"skyblue"
-    }}>
+    <div className='nav-container' style={{}}>
 
-        <div style={{display:"flex",justifyContent:"space-around"}}>
+        <div className='routes-div' style={{}}>
 
-          <Link to={'/'}> <ul> Home</ul></Link>
+          <Link  to={'/'} className='anchor'> <ul> Home</ul></Link>
 
-          <Link to={'/about'}> <ul> About</ul></Link >
+          <Link  to={'/about'} className='anchor'> <ul> About</ul></Link >
 
-          <Link to={'/tech-stack'}> <ul> Tech Stack</ul></Link >
+          <Link  to={'/tech-stack'} className='anchor'> <ul> Tech Stack</ul></Link >
 
-          <Link to={'/projects'}> <ul> Projects</ul></Link >
+          <Link  to={'/projects'} className='anchor'> <ul> Projects</ul></Link >
 
         </div>
-      <div>
-        <ul>logo</ul>
+      <div className='logo-div'>
+        <Link to={'/'} className='anchor'><ul>Logo</ul></Link>
       </div>
     </div>
   )

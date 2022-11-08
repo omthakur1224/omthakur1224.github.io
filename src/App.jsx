@@ -6,8 +6,15 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import TechStack from './pages/TechStack';
-
+import json2mq from 'json2mq';
+import useMediaQuery from '@mui/material/useMediaQuery';
 function App() {
+  const matches = useMediaQuery(
+    json2mq({
+      minWidth: 300,
+      maxWidth:600,
+    }),
+  ); 
   return (
     <div className="App">
       <Nav/>
@@ -17,7 +24,6 @@ function App() {
         <Route path='/projects' element={<Projects/>} />
         <Route path='/tech-stack' element={<TechStack/>}/>
       </Routes>
-    
     </div>
   );
 }
