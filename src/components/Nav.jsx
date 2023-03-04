@@ -14,7 +14,6 @@ function Nav() {
           <Link  to={'/tech-stack'} className='anchor'> <ul> Tech Stack</ul></Link >
 
           <Link  to={'/projects'} className='anchor'> <ul> Projects</ul></Link >
-
         </div>
       <div className='logo-div'>
         <Link to={'/'} className='anchor'><ul>Logo</ul></Link>
