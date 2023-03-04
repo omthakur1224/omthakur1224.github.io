@@ -27,7 +27,7 @@ import Theme from './Theme';
 import { useColorMode } from '@chakra-ui/react';
 
 
-const Links = [ 'About', 'Skills','Tools','Projects','Git-Stats','Contacts','Resume'];
+const Links = [ 'About', 'Skills','Projects','Contacts','Resume'];
 
 
 export default function Simple() {
@@ -35,19 +35,21 @@ export default function Simple() {
  const {colorMode}=useColorMode();
   return (
     <>
-      <Box position={'fixed'} w={'100%'} bg={useColorModeValue('gray.100', 'gray.900')}px={4} mt={0} h="30px" backgroundColor="#0A2647">
+      <Box position={'fixed'} w={'100%'} bg={useColorModeValue('gray.100', 'gray.900')}px={4} mt={0} h="50px" backgroundColor="#0A2647">
         <Flex h="100%"alignItems={'center'}justifyContent={'space-between'} >
             <HStack>
-              <Box>Logo</Box>
+              <Box>OP</Box>
               <Theme h={'100%'}/>
             </HStack>
             <Hide 
-            breakpoint='(max-width: 550px)' 
+            breakpoint='(max-width: 810px)' 
             >
         
-              <HStack as={'nav'} spacing={8} h="100%" display={{ base: 'none', md: 'flex' }} >
+              <HStack as={'nav'} spacing={44} h="100%" display={{ base: 'none', md: 'flex' }} >
                     {Links.map((link) =>(
-                      <Button key={link} h={"100%"} 
+                      <Button key={link} h={"100%"}
+                      fontWeight='500' 
+                      fontSize={20}
                       backgroundColor="#0A2647" borderRadius={'5%'} border={'none'}  _hover={{bg:"#2C74B3"}}>
                          <Link 
                             to={link}
@@ -55,18 +57,31 @@ export default function Simple() {
                             offset={-200}
                             smooth={true}
                             // style={{color:colorMode==="dark"?'white':'black'}} 
-                            spacing={8}>{link}</Link>
+                           >{link}</Link>
                         </Button>
                     ))}
               </HStack>
             </Hide>
-            <Show breakpoint='(max-width: 550px)'>
-              <Menu w={"100%"} backgroundColor={'#0A2647'} >
-                <MenuButton as={IconButton} backgroundColor={'#0A2647'} h="100%" aria-label='Options'icon={<HamburgerIcon  background={"none"} w={"30px"} zIndex='0' boxShadow='none' border={'none'} color={'white'} backgroundColor={'#0A2647'} />} /> 
-                <MenuList>
-                  <Stack w={'100%'} as={'nav'} spacing={4} float={'right'}alignItems='center'backgroundColor='teal'>
+            <Show breakpoint='(max-width: 810px)'>
+              <Menu w={"100%"}
+              //  backgroundColor={'#0A2647'} 
+               >
+                <MenuButton as={IconButton} 
+                // w={"100%"}
+                // backgroundColor={'#0A2647'}
+                 h="100%" aria-label='Options'icon={<HamburgerIcon  background={"none"} w={"30px"} zIndex='0' boxShadow='none' border={'none'} color={'white'} backgroundColor={'#0A2647'} />} /> 
+                <MenuList w={"100vw"}>
+                  <Stack w={'100%'} as={'nav'} spacing={4} 
+                  float={'right'}alignItems='center'
+                  backgroundColor='teal'
+                  >
                       {Links.map((link) => (
-                          <Button key={link} backgroundColor={'#0A2647'} color={'white'} w={'100%'} h={"100%"} border={'none'}  _hover={{bg:"#2C74B3"}}>
+                          <Button 
+                          fontWeight='500' 
+                          fontSize={20}
+                          key={link} 
+                          // backgroundColor={'#0A2647'} 
+                          color={'white'} w={'100%'} h={"100%"} border={'none'}  _hover={{bg:"#2C74B3"}}>
                            <Link 
                             to={link}
                             duration={200}
