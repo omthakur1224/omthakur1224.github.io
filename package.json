@@ -12,7 +12,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
     "chakra-ui-core": "^0.0.1",
+    "flowbite-react": "^0.5.0",
     "framer-motion": "^10.0.1",
     "json2mq": "latest",
     "react": "^18.2.0",
@@ -22,7 +24,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
-    "typewriter-effect": "^2.19.0",
+    "typewriter-effect": "^2.20.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -50,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }

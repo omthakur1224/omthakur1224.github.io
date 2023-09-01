@@ -1,0 +1,29 @@
+@import 'animate.css';
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.intro {
+    text-align: center;
+}
+
+.animate {
+    animation: fadeInUp 4s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

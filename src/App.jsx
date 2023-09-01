@@ -13,38 +13,29 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import NewNav from './components/NewNav'
 import Toggle from './components/Toggle';
 import HashScrollPage from './pages/Hash';
+import Contact from './pages/Contact';
 function App() {
-  // const matches = useMediaQuery(
-  //   json2mq({
-  //     minWidth: 300,
-  //     maxWidth:600,
-  //   }),
-  // ); 
   return (
-    <div 
-    // className="App"
-    style={{top:0, margin:"auto"}}
-    >
-      {/* <Nav/> */}
+    <div>
       <section >
-
-      <Navbar/>
+        <Navbar />
       </section>
-      {/* <HashScrollPage/> */}
-      
-       {/* <NewNav/> */}
-       {/* <Home /> */}
-       <section id='About'>
-          <About />
-       </section>
-       <section id='Skills'> 
-          <TechStack />
-       </section>
-
+      <section id='Home'>
+        <Home />
+      </section>
+      <section id='About'>
+        <About />
+      </section>
+      <section id='Skills'>
+        <TechStack />
+      </section>
       <section id='Projects'>
-         <Projects />
+        <Projects />
       </section>
-     
+      <section id="Contacts">
+        <Contact />
+      </section>
+
       {/* <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/About' element={<About/>} />
